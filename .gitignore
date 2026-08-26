@@ -1,0 +1,15 @@
+AGENTS.md
+build/
+cmake-build-*/
+compile_commands.json
+*.obj
+*.lno
+*.abs
+*.out
+*.map
+*.hex
+*.vkp
+__pycache__/
+*.py[cod]
+.DS_Store
+.kateproject.build

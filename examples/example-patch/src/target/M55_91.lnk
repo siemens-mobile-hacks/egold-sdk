@@ -1,0 +1,6 @@
+ASSIGN(
+	_strcmp(FAR(0BFA966h)),
+	_strcpy(FAR(0BFA7FAh)),
+	_strrchr(FAR(0BFA9BEh)),
+	_sys_open_resume(FAR(0A41696h))
+)
