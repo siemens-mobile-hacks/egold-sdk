@@ -37,13 +37,13 @@ set(FF_PATH ${SDK_ROOT}/../fullflashes CACHE PATH "Fullflashes path")
 
 function(define_patch target phone svn)
 	set(target_dir ${CMAKE_CURRENT_SOURCE_DIR}/src/target)
-	set(target_name ${phone}_${svn})
-	set(fullflash ${FF_PATH}/${phone}sw${svn}.bin)
+	set(target_name ${phone}v${svn})
+	set(fullflash ${FF_PATH}/${phone}v${svn}.bin)
 
 	set_property(TARGET ${target} PROPERTY SUFFIX .abs)
 	target_sources(${target} PRIVATE ${target_dir}/${target_name}.asm)
 	target_include_directories(${target} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
-	target_compile_definitions(${target} PUBLIC ${target_name})
+	target_compile_definitions(${target} PUBLIC ${phone}_${svn})
 	target_compile_options(${target} PUBLIC
 		$<$<COMPILE_LANGUAGE:C>:-RclFC=PATCH_BODY>
 		$<$<COMPILE_LANGUAGE:C>:-RclPR=PATCH_BODY>
