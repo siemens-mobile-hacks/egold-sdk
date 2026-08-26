@@ -1,5 +1,6 @@
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR C166)
+set(CMAKE_BUILD_TYPE MinSizeRel CACHE STRING "Build type")
 
 get_filename_component(SDK_ROOT ${CMAKE_CURRENT_LIST_DIR}/.. ABSOLUTE)
 set(CMAKE_USER_MAKE_RULES_OVERRIDE ${SDK_ROOT}/cmake/modules/Tasking.cmake)
